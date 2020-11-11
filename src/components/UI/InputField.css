@@ -1,0 +1,27 @@
+.input-field-container {
+    
+    width: 14rem;
+    margin: 0.5rem 0;
+}
+
+input {
+    position: relative;
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    box-shadow: none;
+    color: #111;
+    font-size: 1rem;
+    box-shadow: 0 6px lightgray;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 0 0 5px 5px;
+}
+
+input:valid, input:focus {
+    box-shadow: 0 4px lightgray;
+    top: 2px;
+}
+
+

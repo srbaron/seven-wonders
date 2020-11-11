@@ -1,4 +1,4 @@
-import css from './CardButton.css';
+import './CardButton.css';
 
 function CardButton(props) {
     return (
