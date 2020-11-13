@@ -1,35 +1,23 @@
 import './App.css';
+import {Route, BrowserRouter as Router} from 'react-router-dom';
 
-import CardButton from './components/UI/CardButton';
-import InputField from './components/UI/InputField';
-import PlayerCountField from './components/UI/PlayerCountField';
+import Home from './containers/home/Home';
+import Host from './containers/host/Host';
+import Join from './containers/join/Join';
+
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>
-          Welcome to Seven Wonders
-        </p>
-        <CardButton btnText='Host Game'></CardButton>
-        <CardButton btnText='Join Game'></CardButton>
-        <CardButton btnText='Rules'></CardButton>
-
-        <p>
-          Join a Game
-        </p>
-        <InputField labelText='Enter Name'></InputField>
-        <InputField labelText='Enter Join Code'></InputField>
-        <CardButton btnText='Join'></CardButton>
-
-        <p>
-          Host a Game
-        </p>
-        <InputField labelText='Enter Name'></InputField>
-        <PlayerCountField></PlayerCountField>
-        <CardButton btnText='Host'></CardButton>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <header className='App-header'>
+          <Route path='/' exact component={Home}/>
+          <Route path='/host' component={Host}/>
+          <Route path='/join' component={Join}/>
+        </header>
+      </div>
+    </Router>
+    
   );
 }
 
